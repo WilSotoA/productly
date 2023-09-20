@@ -6,6 +6,9 @@ from django.utils import timezone
 class Categoria(models.Model):
     nombre = models.CharField(max_length=255)
 
+    def __str__(self) -> str:
+        return self.nombre
+
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=255)
@@ -13,3 +16,6 @@ class Producto(models.Model):
     puntaje = models.FloatField()
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     creado_en = models.DateTimeField(default=timezone.now)
+
+    def __str__(self) -> str:
+        return self.nombre
