@@ -1,4 +1,4 @@
-# Nombre del Proyecto
+# Productly
 
 Aplicación con CRUD para productos varios
 
